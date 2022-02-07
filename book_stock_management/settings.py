@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'store',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +80,7 @@ DATABASES = {
         'NAME': 'book_store',
         'USER': 'tito',
     'PASSWORD':'2574',
-    'HOST': 'localhost', # the missing piece of the puzzle 
+    'HOST': 'localhost', 
     'PORT': '',
     }
 }

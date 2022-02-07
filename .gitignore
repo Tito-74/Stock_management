@@ -1,0 +1,10 @@
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'book_store',
+        'USER': 'tito',
+    'PASSWORD':'2574',
+    'HOST': 'localhost', 
+    'PORT': '',
+    }
+}
