@@ -8,10 +8,6 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 # Create your views here.
 
-# class StoreViewSet(viewsets.ModelViewSet):
-#     queryset = Store.objects.all()
-#     serializer_class = StoreSerializer
-
 @api_view(['GET'])
 def storeList(request):
 	store = Store.objects.all().order_by('-id')

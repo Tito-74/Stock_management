@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'store',
     'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -71,6 +72,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'book_stock_management.wsgi.application'
 
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
