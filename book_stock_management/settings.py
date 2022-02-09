@@ -42,6 +42,13 @@ INSTALLED_APPS = [
     'django_filters',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication', 
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -75,6 +82,8 @@ WSGI_APPLICATION = 'book_stock_management.wsgi.application'
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
+
+
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases

@@ -1,5 +1,9 @@
 from django.urls import path
 from . import views
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 from rest_framework.routers import DefaultRouter
 
 
@@ -9,4 +13,6 @@ urlpatterns = [
   path('store-create/', views.storeCreate, name="store-create"),
   path('store-update/<str:pk>/', views.storeUpdate, name="store-update"),
   path('book-list/', views.BookListView.as_view(), name="book-list"),
+  path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 	]
