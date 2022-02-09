@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from .serializers import StoreSerializer
-from .models import Store
+from .serializers import StoreSerializer, BookSerializer
+from .models import Store, Book, Author 
 from rest_framework import viewsets
+from rest_framework import generics
 from django.http import JsonResponse
 
 from rest_framework.decorators import api_view
@@ -40,3 +41,9 @@ def storeUpdate(request, pk):
 	return Response(serializer.data)
 
 
+
+
+class BookListView(generics.ListAPIView):
+	serializer_class = BookSerializer
+	queryset = Book.objects.all()
+	filter_fields = ('title','year_of_pub')
