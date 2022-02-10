@@ -18,6 +18,7 @@ This is a bookstore inventory management system API. Procedures of setting and r
 * Python 
 * django
 * swagger 
+* Heroku
 
 ### if you face any challenges running ...
 ###### please contact me on kipkirui133@gmail.com
